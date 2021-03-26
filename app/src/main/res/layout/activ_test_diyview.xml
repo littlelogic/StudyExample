@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.view.PerFrameLayout
+        android:id="@+id/top_layout"
+        android:layout_above="@+id/below_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/darker_gray">
+
+        <TextView
+            android:layout_marginTop="22dp"
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_main"
+            android:background="@color/holo_green_dark"
+            android:textColor="@color/textColorHint"
+            android:layout_marginLeft="5dp"
+            android:textSize="16dp"/>
+
+    </android.view.PerFrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/below_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/editText"
+            android:minHeight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/holo_green_dark"
+            android:maxLines="1"
+            android:text="text xxx"
+            android:textColor="#fff"
+            android:textSize="28dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

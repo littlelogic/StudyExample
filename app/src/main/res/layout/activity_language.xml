@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+          android:orientation="horizontal"
+          android:id="@+id/ll_a"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/lighter_gray"
+            />
+
+        <com.example.wujiawen.ExampleLanguage.CheckBoxSow
+            android:id="@+id/ll_a_Check"
+            android:layout_margin="5dp"
+            android:text="@string/English"
+            android:textColor="@color/darker_gray"
+            android:layout_gravity="center_vertical"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:orientation="horizontal"
+        android:id="@+id/ll_b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/lighter_gray"
+            />
+
+        <com.example.wujiawen.ExampleLanguage.CheckBoxSow
+            android:id="@+id/ll_b_Check"
+            android:layout_margin="5dp"
+            android:text="@string/SimplifiedChinese"
+            android:textColor="@color/darker_gray"
+            android:layout_gravity="center_vertical"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:orientation="horizontal"
+        android:id="@+id/ll_c"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/lighter_gray"
+            />
+
+        <com.example.wujiawen.ExampleLanguage.CheckBoxSow
+            android:id="@+id/ll_c_Check"
+            android:layout_margin="5dp"
+            android:text="@string/TraditionalChinese"
+            android:textColor="@color/darker_gray"
+            android:layout_gravity="center_vertical"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:orientation="horizontal"
+        android:id="@+id/ll_d"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/lighter_gray"
+            />
+
+        <com.example.wujiawen.ExampleLanguage.CheckBoxSow
+            android:id="@+id/ll_d_Check"
+            android:layout_margin="5dp"
+            android:text="@string/FollowSystem"
+            android:textColor="@color/darker_gray"
+            android:layout_gravity="center_vertical"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+
+</LinearLayout>

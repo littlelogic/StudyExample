@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bg_out"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.study.recycleview.MRecycleView
+        android:id="@+id/rvBar"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"/>
+
+    <TextView
+        android:id="@+id/test_a"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="test_a"
+        android:textSize="12dp"
+        android:background="@color/holo_gray_bright"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/test_b"
+        android:layout_toRightOf="@+id/test_a"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="test_b"
+        android:textSize="12dp"
+        android:background="@color/holo_gray_bright"
+        android:textColor="@color/black"/>
+
+
+</RelativeLayout>
+

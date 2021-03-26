@@ -1,0 +1,16 @@
+<com.yluo.testnestscrolling.NestScrollingLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+ >
+
+	<com.yluo.testnestscrolling.NestScrollingView
+	    android:layout_marginTop="100dp"
+	    android:layout_width="match_parent"
+	    android:layout_height="100dp"
+	    android:background="@android:color/holo_green_dark">
+	    
+	</com.yluo.testnestscrolling.NestScrollingView>
+
+</com.yluo.testnestscrolling.NestScrollingLayout>

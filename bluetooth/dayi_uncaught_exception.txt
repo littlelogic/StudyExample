@@ -1,0 +1,38 @@
+2018:09:05 10:42:03 PHONE MODEL:vivo X21A,SDK VERSION:27,SYSTEM VERSION:8.1.0,
+java.lang.NullPointerException: Attempt to read from field 'java.lang.Object java.util.LinkedList$Node.item' on a null object reference
+	at java.util.LinkedList.get(LinkedList.java:477)
+	at com.qihoo.vue.internal.data.Group.get(Group.java:157)
+	at com.qihoo.vue.configs.QhClipGroup.getDuration(QhClipGroup.java:32)
+	at com.qihoo.vue.internal.data.ConfigsManager.normalizeClips(ConfigsManager.java:899)
+	at com.qihoo.vue.internal.data.ConfigsManager.addPIPVideoToGroup(ConfigsManager.java:948)
+	at com.qihoo.vue.internal.data.ConfigsManager.addPIPVideos(ConfigsManager.java:751)
+	at com.qihoo.vue.internal.data.ConfigsManager.onNotifyPropertyChanged(ConfigsManager.java:1194)
+	at com.qihoo.vue.internal.data.PropertyData$1.run(PropertyData.java:31)
+	at android.os.Handler.handleCallback(Handler.java:790)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loop(Looper.java:192)
+	at com.qihoo.vue.utils.QETaskController.run(QETaskController.java:77)
+	at java.lang.Thread.run(Thread.java:764)
+
+2018:09:10 07:31:22 PHONE MODEL:vivo X21A,SDK VERSION:27,SYSTEM VERSION:8.1.0,
+java.lang.NullPointerException: Attempt to invoke virtual method 'void com.qihoo.qmeengine.core.element.set_int(java.lang.String, int)' on a null object reference
+	at com.qihoo.vue.internal.data.ConfigsManager.updateVideoType(ConfigsManager.java:1365)
+	at com.qihoo.vue.internal.data.Group.updateVideoType(Group.java:84)
+	at com.media.editor.filter.editor_context.updateTransitionDo(editor_context.java:1086)
+	at com.media.editor.filter.editor_context.updateTransition(editor_context.java:1072)
+	at com.media.editor.video.EditorController.updateTransition(EditorController.java:70)
+	at com.media.editor.material.CutToDialogFragment.a(CutToDialogFragment.java:1294)
+	at com.media.editor.material.CutToDialogFragment.a(CutToDialogFragment.java:1254)
+	at com.media.editor.material.CutToDialogFragment.d(CutToDialogFragment.java:1247)
+	at com.media.editor.material.CutToDialogFragment.c(CutToDialogFragment.java:68)
+	at com.media.editor.material.n.onClick(CutToDialogFragment.java:1342)
+	at android.view.View.performClick(View.java:6324)
+	at android.view.View$PerformClick.run(View.java:24977)
+	at android.os.Handler.handleCallback(Handler.java:790)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loop(Looper.java:192)
+	at android.app.ActivityThread.main(ActivityThread.java:6795)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:817)
+

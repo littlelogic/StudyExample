@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp"
+    tools:context="com.example.wujiawen.ExampleShortcut.ShortActivity" >
+
+    <Button 
+        android:id="@+id/create_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="创建快捷方式"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        />
+    
+    <Button 
+        android:id="@+id/del_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="删除快捷方式"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        />
+        
+</RelativeLayout>

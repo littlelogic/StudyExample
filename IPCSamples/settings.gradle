@@ -1,0 +1,5 @@
+
+
+include ':app', ':aidl_server',':aidl_client','binder_pool_server', 'binder_pool_client', 'binder_pool_client2'
+
+include  ':messenger_provider_server', ':messenger_provider_client'

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+       android:drawable="@drawable/icon"
+       android:insetTop="50dp"
+       android:insetLeft="50dp"
+       android:insetBottom="50dp"
+       android:insetRight="50dp" />
+
+    <!--android:insetTop：图像距离上边的距离。
+        android:insetRight：图像距离右侧的距离。
+        android:insetBottom：图像距离底边的距离。
+        android:insetLeft：图像距离左侧的距离。-->

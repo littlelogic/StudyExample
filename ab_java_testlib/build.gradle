@@ -1,0 +1,11 @@
+apply plugin: 'java'
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    implementation files('libs/commons-codec-1.12.jar')
+    implementation files('libs/poi-4.1.0.jar')
+    implementation files('libs/pepk-src.jar')
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"

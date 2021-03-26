@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.wujiawen.a_Main">
+
+
+    <uses-sdk
+        android:targetSdkVersion="23" />
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <!-- 添加快捷方式 -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <!-- 移除快捷方式 -->
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <!-- 查询快捷方式 -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
+
+    <uses-permission android:name="com.android.launcher2.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher2.permission.WRITE_SETTINGS" />
+
+    <uses-permission android:name="com.android.launcher3.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher3.permission.WRITE_SETTINGS" />
+
+    <uses-permission android:name="com.android.launcher4.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher4.permission.WRITE_SETTINGS" />
+
+    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" />
+
+
+    <!--声明本应用 可允许通信的权限-->
+    <permission android:name="scut.carson_ho.Read" android:protectionLevel="normal"/>
+    <!--细分读 & 写权限如下，但本Demo直接采用全权限-->
+    <!--<permission android:name="scut.carson_ho.Write" android:protectionLevel="normal"/>-->
+    <!--<permission android:name="scut.carson_ho.PROVIDER" android:protectionLevel="normal"/>-->
+
+
+
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- <uses-permission android:name="android.permission.CAMERA" /> -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.STATUS_BAR"/>
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- 添加360SDK必需要的权限。begin -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- <uses-permission android:name="android.permission.SEND_SMS" /> -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <!-- <uses-permission android:name="android.permission.READ_CONTACTS" /> -->
+    <!-- <uses-permission android:name="android.permission.WRITE_SMS" /> -->
+
+
+    <!-- payment -->
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!-- <uses-permission android:name="android.permission.RECEIVE_SMS" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+    <uses-permission android:name="android.webkit.permission.PLUGIN"/>
+    <!-- 浮窗 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <!-- 微信分享相关 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+
+    <!-- SDK权限配置开始 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.BIND_JOB_SERVICE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+
+    <!-- 推送小米通道配置开始 -->
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="${applicationId}.permission.MIPUSH_RECEIVE"/>
+
+    <!-- localserver权限-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <permission
+        android:name="${applicationId}.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signatureOrSystem"/>
+
+    <uses-permission android:name="${applicationId}.MIPUSH_RECEIVE"/>
+    <!-- 推送小米通道配置结束 -->
+
+    <!-- 推送华为通道配置开始 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 推送华为通道配置结束 -->
+
+    <!-- 推送OPPO通道配置开始 -->
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE" />
+    <!-- 推送OPPO通道 配置结束-->
+
+
+    <!-- 魅族权限配置开始 -->
+    <!-- 兼容flyme5.0以下版本，不然无法收到消息 -->
+    <uses-permission android:name="com.meizu.flyme.push.permission.RECEIVE"/>
+
+    <!-- QDAS 统计读取错误日志权限配置开始 -->
+    <!-- 读取程序产生的错误日志 -->
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <!-- QDAS权限配置结束 -->
+
+    <permission
+        android:name="${applicationId}.push.permission.MESSAGE"
+        android:protectionLevel="signature"/>
+
+    <uses-permission android:name="${applicationId}.push.permission.MESSAGE"/>
+    <!-- 兼容flyme3.0配置权限 -->
+    <uses-permission android:name="com.meizu.c2dm.permission.RECEIVE"/>
+
+    <permission
+        android:name="${applicationId}.permission.C2D_MESSAGE"
+        android:protectionLevel="signature"/>
+
+    <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE"/>
+    <!-- 魅族权限配置结束 -->
+
+
+    <!-- qiku start -->
+    <!-- 系统账户操作权限 -->
+    <!-- <uses-permission android:name="android.permission.GET_ACCOUNTS" /> -->
+    <!-- <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" /> -->
+    <!-- <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" /> -->
+    <!-- <uses-permission android:name="android.permission.USE_CREDENTIALS" /> -->
+    <!-- 系统设置操作权限 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_SETTINGS"/>
+    <!-- qiku end -->
+
+
+    <!-- QDAS打点SDK所需权限 -->
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+
+
+
+
+
+    <application
+        android:name="com.example.wujiawen.a_Main.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:remove="android:appComponentFactory">
+
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.example.wujiawen.ExampleLanguage.LanguageActiv"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.example.wujiawen.Tools.AlphaActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.study.diyView.TestActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+
+        <activity
+            android:name="com.example.wujiawen.ExampleDrawable.DrawableStudyActiv"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.example.wujiawen.ExampleTextView.SpannableStringExampleActiv"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.example.wujiawen.ExamplesShader.ShaderExampleActiv"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.example.wujiawen.ExampleShortcut.ShortActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.example.wujiawen.Example_b.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.example.wujiawen.ExampleDragFillBlankView.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.example.wujiawen.ExampleTextView.EditTextCursorActiv"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.example.wujiawen.ExampleTextView.ExpandTextViewActiv"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.example.wujiawen.ExampleLoopThread.LoopActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.example.wujiawen.ExampleScrollView.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.study.z_reflection_view.ReflectViewActi"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.study.Fragment.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.study.activState.StateActiv_A"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.study.dataSave.parcelable.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.study.dataSave.parcelable.SecondActivity"
+            android:process = ":SecondActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <service
+            android:name="com.study.dataSave.parcelable.MessengerService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":MessengerService">
+        </service>
+
+        <!--
+        // 声明外界进程可访问该Provider的权限（读 & 写）
+        android:permission="scut.carson_ho.PROVIDER"
+
+        // 权限可细分为读 & 写的权限
+        // 外界需要声明同样的读 & 写的权限才可进行相应操作，否则会报错
+        // android:readPermisson = "scut.carson_ho.Read"
+        // android:writePermisson = "scut.carson_ho.Write"
+        -->
+        <provider
+            android:name="com.study.contentProvider.MyProvider"
+            android:authorities="cn.scu.myprovider"
+            android:exported="true"
+            android:permission="scut.carson_ho.PROVIDER"
+            >
+        </provider>
+
+        <activity
+            android:name="com.study.contentProvider.ContentProviderActi"
+            android:process = ":ContentProviderActi"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.study.database.SqlActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.study.z_glide.GlideActiv"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.study.bigPic.GigPicActiv"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.study.activState.EventBusActiv"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.study.RxAndroid.RxAndroidActiv"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.study.RxAndroid.RxAndroidActiv__think"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+
+
+        <activity
+            android:name="com.study.RxAndroid.AsyncTaskActiv"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.study.RxAndroid.HandlerLoopActiv"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.study.diyView.DiyPerViewActiv"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.study.diyView.DiyPerViewActiv2"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.study.recycleview.RecycleviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+
+
+
+
+
+
+
+
+
+
+        <!--<activity-alias
+            android:enabled="true"
+            android:icon="@mipmap/ic_launcher_round"
+            android:label="StudyAlias"
+            android:name=".MainActivity"
+            android:targetActivity="com.example.wujiawen.a_Main.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity-alias>&ndash;&gt;
+
+        <activity-alias
+            android:enabled="true"
+            android:icon="@drawable/icon"
+            android:label="应用名称2"
+            android:name=".MainStudyExampleActiv"
+            android:targetActivity="com.example.wujiawen.ExampleDrawable.DrawableStudyActiv">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity-alias>-->
+
+        <!--设置wallpapaer的activity -->
+        <!-- Intent received used to install shortcuts from other applications -->
+       <!-- <receiver
+            android:name="com.android.launcher2.InstallShortcutReceiver"
+            android:permission="com.android.launcher.permission.INSTALL_SHORTCUT">
+            <intent-filter>
+                <action android:name="com.android.launcher.action.INSTALL_SHORTCUT" />
+            </intent-filter>
+        </receiver>-->
+
+
+    </application>
+
+</manifest>

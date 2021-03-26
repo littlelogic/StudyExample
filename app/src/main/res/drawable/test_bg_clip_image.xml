@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<clip xmlns:android="http://schemas.android.com/apk/res/android"
+      android:clipOrientation="horizontal"
+      android:drawable="@drawable/icon"
+      android:gravity="center" >
+</clip>-->
+
+
+
+<!-- 如果没有android:drawable属性，必须要设置一个任意类型的drawable作为子节点-->
+<clip xmlns:android="http://schemas.android.com/apk/res/android"
+      android:clipOrientation="horizontal"
+      android:gravity="center" >
+    <bitmap
+        android:src="@drawable/icon"
+        android:gravity="center"
+        />
+</clip>
+

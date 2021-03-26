@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/hScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--android:adjustViewBounds="true"-->
+        <ImageView
+            android:id="@+id/iv_big"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"/>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_a"
+            android:text="tv_a"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/tv_b"
+            android:text="tv_b"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/tv_c"
+            android:text="tv_c"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/tv_d"
+            android:text="tv_d"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/tv_e"
+            android:text="tv_e"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+

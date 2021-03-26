@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/StudyExample.iml" filepath="$PROJECT_DIR$/StudyExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IPCSamples/StudyExample.IPCSamples.iml" filepath="$PROJECT_DIR$/.idea/modules/IPCSamples/StudyExample.IPCSamples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IPCSamples/aidl_client/StudyExample.IPCSamples.aidl_client.iml" filepath="$PROJECT_DIR$/.idea/modules/IPCSamples/aidl_client/StudyExample.IPCSamples.aidl_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IPCSamples/aidl_server/StudyExample.IPCSamples.aidl_server.iml" filepath="$PROJECT_DIR$/.idea/modules/IPCSamples/aidl_server/StudyExample.IPCSamples.aidl_server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ab_java_testlib/StudyExample.ab_java_testlib.iml" filepath="$PROJECT_DIR$/.idea/modules/ab_java_testlib/StudyExample.ab_java_testlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/StudyExample.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/StudyExample.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/listview/StudyExample.listview.iml" filepath="$PROJECT_DIR$/.idea/modules/listview/StudyExample.listview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/utils/StudyExample.utils.iml" filepath="$PROJECT_DIR$/.idea/modules/utils/StudyExample.utils.iml" />
+    </modules>
+  </component>
+</project>

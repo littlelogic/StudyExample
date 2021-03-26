@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true"  android:color="@color/blue_a">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/light_gray" />
+        </shape>
+    </item>
+
+    <!--
+    TODO 注意下面的写法
+    TODO android:color="@color/blue_a" 如果直接设置色值，有的时候会有问题,
+    TODO android:color="#ffffff" 像这样，有时有问题，整个xml就加在失败了
+    TODO 还是固定的功能用固定的文件吧，只改变背景的样式的xml，只改变字体样式的xml
+    -->
+    <item android:state_pressed="false" android:state_enabled="true" android:color="@color/blue_a">
+        <shape android:shape="rectangle">
+            <solid android:color="#ffffff" />
+        </shape>
+    </item>
+
+    <item android:state_enabled="false" android:color="@color/black_a">
+        <shape android:shape="rectangle">
+            <solid android:color="#ffffff" />
+        </shape>
+    </item>
+
+</selector>

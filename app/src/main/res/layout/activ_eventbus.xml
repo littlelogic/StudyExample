@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="a_1  ThreadMode.MAIN"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/a_1"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#79D5D0"
+        android:textColor="#080909"
+        android:paddingLeft="10dp"
+        android:gravity="left|center_vertical"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:text="a_2  ThreadMode.BACKGROUND"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/a_2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#79D5D0"
+        android:textColor="#080909"
+        android:paddingLeft="10dp"
+        android:gravity="left|center_vertical"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:text="a_3  ThreadMode.ASYNC"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/a_3"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#79D5D0"
+        android:textColor="#080909"
+        android:paddingLeft="10dp"
+        android:gravity="left|center_vertical"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:text="a_4  ThreadMode.POSTING"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/a_4"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#79D5D0"
+        android:textColor="#080909"
+        android:paddingLeft="10dp"
+        android:gravity="left|center_vertical"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:text="a_5  ThreadMode.MAIN_ORDERED"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/a_5"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#79D5D0"
+        android:textColor="#080909"
+        android:paddingLeft="10dp"
+        android:gravity="left|center_vertical"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:text="a_6  粘滞事件1"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/a_6"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#79D5D0"
+        android:textColor="#080909"
+        android:paddingLeft="10dp"
+        android:gravity="left|center_vertical"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:text="a_7  粘滞事件2"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/a_7"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#79D5D0"
+        android:textColor="#080909"
+        android:paddingLeft="10dp"
+        android:gravity="left|center_vertical"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:text="a_8  移除粘滞事件3"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/a_8"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#79D5D0"
+        android:textColor="#080909"
+        android:paddingLeft="10dp"
+        android:gravity="left|center_vertical"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:text="a_9  only发送粘滞事件3"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/a_9"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#79D5D0"
+        android:textColor="#080909"
+        android:paddingLeft="10dp"
+        android:gravity="left|center_vertical"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:text="a_10  only发送EventC"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/a_10"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#79D5D0"
+        android:textColor="#080909"
+        android:paddingLeft="10dp"
+        android:gravity="left|center_vertical"
+        android:textSize="16dp"/>
+
+</LinearLayout>

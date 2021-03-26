@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/white"
+              android:padding="20dip"
+              android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginBottom="20dip"/>
+
+
+    <EditText
+        android:id="@+id/EditView_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="#C7C7C5"
+        android:textCursorDrawable="@color/colorAccent"
+        android:text="01-直接设置颜色"
+        android:layout_marginBottom="20dip"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/EditView_2"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="#C7C7C5"
+        android:textCursorDrawable="@drawable/edit_cursor"
+        android:text="02-设置shape"
+        android:layout_marginBottom="20dip"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/EditView_3"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="#C7C7C5"
+        android:textCursorDrawable="@drawable/icon"
+        android:text="03-设置图片"
+        android:layout_marginBottom="20dip"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/EditView_4"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="#C7C7C5"
+        android:textCursorDrawable="@color/colorAccent"
+        android:text="04"
+        android:layout_marginBottom="20dip"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/EditView_5"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="#C7C7C5"
+        android:textCursorDrawable="@color/colorAccent"
+        android:text="05"
+        android:layout_marginBottom="20dip"
+        android:textColor="#000000" />
+
+
+
+
+
+</LinearLayout>

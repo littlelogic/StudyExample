@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="1.7">
+      <module name="ab_java_testlib" target="1.7" />
+      <module name="StudyExample.app" target="1.8" />
+      <module name="StudyExample.IPCSamples.aidl_client" target="1.8" />
+      <module name="StudyExample.IPCSamples.aidl_server" target="1.8" />
+      <module name="StudyExample.listview" target="1.8" />
+      <module name="StudyExample.utils" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

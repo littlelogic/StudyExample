@@ -1,0 +1,57 @@
+include ':app' , ':utils'
+
+
+include ':listview'
+//include ':utils'
+//include ':listview'
+
+//include ':ab_exercise'
+
+
+//include ':ab_exercise:librecorder_sdk'
+
+
+////include ':photoselect'
+//include ':photoselect2'
+include  ':ab_java_testlib'
+//include  ':photoselect3', ':JinjingzhengPickPhoto', ':blankexample'
+//include ':TestNestScrolling'
+//
+//
+//project(':JinjingzhengPickPhoto').projectDir = new File('photoselect_x')
+//include ':a_glsl_a'
+//include ':a_glsl_b'
+//
+////include ':Android-StickyNavLayout-master'
+//
+//include ':record'
+//
+/////project(':logger').projectDir = new File(settingsDir, 'libraries/Logger')
+//include ':IPCSamples/app'
+include ':IPCSamples:aidl_client'
+include ':IPCSamples:aidl_server'
+//include ':IPCSamples/messenger_provider_client'
+//include ':IPCSamples/messenger_provider_server'
+//include ':IPCSamples/binder_pool_client'
+//include ':IPCSamples/binder_pool_client2'
+//include ':IPCSamples/binder_pool_server'
+//
+//
+//
+//
+//include ':app_a'
+//project(':app_a').projectDir = new File(settingsDir,'zz_summarize_study/DynamicViewPagerDemo-master/app')
+//
+//
+//include ':app_b'
+//project(':app_b').projectDir = new File(settingsDir,'zz_summarize_study/ViewPagerTransforms-master/app')
+//include ':transformslibrary'
+//project(':transformslibrary').projectDir = new File(settingsDir,'zz_summarize_study/ViewPagerTransforms-master/transformslibrary')
+//
+//
+////include ':app_c'
+////project(':app_c').projectDir = new File(settingsDir,'zz_summarize_study/PinchImageView-master/pinchimageviewexample')
+//
+
+
+

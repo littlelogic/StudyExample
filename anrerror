@@ -1,0 +1,198 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+android.util.Log$TerribleFailure: Service ServiceRecord{f64e1bf u0 com.qihoo360.mobilesafe/com.qihoo.sdk.report.network.NetworkService} in process ProcessRecord{fd9300 16543:com.qihoo360.mobilesafe/u0a3} not same as in map: ServiceRecord{3afa0b5 u0 com.qihoo360.mobilesafe/com.qihoo.sdk.report.network.NetworkService}
+	at android.util.Log.wtf(Log.java:295)
+	at android.util.Slog.wtf(Slog.java:82)
+	at com.android.server.am.ActiveServices.killServicesLocked(ActiveServices.java:2688)
+	at com.android.server.am.ActivityManagerService.cleanUpApplicationRecordLocked(ActivityManagerService.java:17071)
+	at com.android.server.am.ActivityManagerService.handleAppDiedLocked(ActivityManagerService.java:5219)
+	at com.android.server.am.ActivityManagerService.appDiedLocked(ActivityManagerService.java:5410)
+	at com.android.server.am.ActivityManagerService$AppDeathRecipient.binderDied(ActivityManagerService.java:1487)
+	at android.os.BinderProxy.sendDeathNotice(Binder.java:717)
+
+
+android.util.Log$TerribleFailure: Attempting to schedule restart of ServiceRecord{f64e1bf u0 com.qihoo360.mobilesafe/com.qihoo.sdk.report.network.NetworkService} when found in map: null
+	at android.util.Log.wtf(Log.java:295)
+	at android.util.Slog.wtf(Slog.java:82)
+	at com.android.server.am.ActiveServices.scheduleServiceRestartLocked(ActiveServices.java:1497)
+	at com.android.server.am.ActiveServices.realStartServiceLocked(ActiveServices.java:1892)
+	at com.android.server.am.ActiveServices.bringUpServiceLocked(ActiveServices.java:1772)
+	at com.android.server.am.ActiveServices.startServiceInnerLocked(ActiveServices.java:523)
+	at com.android.server.am.ActiveServices.startServiceLocked(ActiveServices.java:466)
+	at com.android.server.am.ActivityManagerService.startService(ActivityManagerService.java:17295)
+	at android.app.ActivityManagerNative.onTransact(ActivityManagerNative.java:1077)
+	at android.app.ActivityManagerNativeEx.onTransact(ActivityManagerNativeEx.java:87)
+	at com.android.server.am.ActivityManagerService.onTransact(ActivityManagerService.java:2851)
+	at android.os.Binder.execTransact(Binder.java:594)
+
+
+android.util.Log$TerribleFailure: WakeLock finalized while still held: *job*/com.qiku.android.ota/.service.CotaJobService
+	at android.util.Log.wtf(Log.java:295)
+	at android.util.Log.wtf(Log.java:260)
+	at android.os.PowerManager$WakeLock.finalize(PowerManager.java:1180)
+	at java.lang.Daemons$FinalizerDaemon.doFinalize(Daemons.java:222)
+	at java.lang.Daemons$FinalizerDaemon.run(Daemons.java:209)
+	at java.lang.Thread.run(Thread.java:761)
+
+android.util.Log$TerribleFailure: Attempting to schedule restart of ServiceRecord{a8322e1 u0 com.lightsky.video/com.qihoo.sdk.report.network.NetworkService} when found in map: null
+	at android.util.Log.wtf(Log.java:295)
+	at android.util.Slog.wtf(Slog.java:82)
+	at com.android.server.am.ActiveServices.scheduleServiceRestartLocked(ActiveServices.java:1497)
+	at com.android.server.am.ActiveServices.realStartServiceLocked(ActiveServices.java:1892)
+	at com.android.server.am.ActiveServices.bringUpServiceLocked(ActiveServices.java:1772)
+	at com.android.server.am.ActiveServices.startServiceInnerLocked(ActiveServices.java:523)
+	at com.android.server.am.ActiveServices.startServiceLocked(ActiveServices.java:466)
+	at com.android.server.am.ActivityManagerService.startService(ActivityManagerService.java:17295)
+	at android.app.ActivityManagerNative.onTransact(ActivityManagerNative.java:1077)
+	at android.app.ActivityManagerNativeEx.onTransact(ActivityManagerNativeEx.java:87)
+	at com.android.server.am.ActivityManagerService.onTransact(ActivityManagerService.java:2851)
+	at android.os.Binder.execTransact(Binder.java:594)
+
+java.lang.NullPointerException: Attempt to invoke interface method 'void android.print.IPrintSpooler.setClient(android.print.IPrintSpoolerClient)' on a null object reference
+	at com.android.server.print.RemotePrintSpooler.clearClientLocked(RemotePrintSpooler.java:676)
+	at com.android.server.print.RemotePrintSpooler.-wrap0(RemotePrintSpooler.java)
+	at com.android.server.print.RemotePrintSpooler$MyServiceConnection.onServiceDisconnected(RemotePrintSpooler.java:708)
+	at android.app.LoadedApk$ServiceDispatcher.doDeath(LoadedApk.java:1498)
+	at android.app.LoadedApk$ServiceDispatcher$RunConnection.run(LoadedApk.java:1512)
+	at android.os.Handler.handleCallback(Handler.java:751)
+	at android.os.Handler.dispatchMessage(Handler.java:95)
+	at android.os.Looper.loop(Looper.java:154)
+	at com.android.server.SystemServer.run(SystemServer.java:373)
+	at com.android.server.SystemServer.main(SystemServer.java:222)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:886)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:776)
+
+
+java.lang.NullPointerException: Attempt to invoke virtual method 'boolean java.util.HashMap.containsKey(java.lang.Object)' on a null object reference
+	at com.qihoo.livecloud.tools.LogEntry.createLogger(lightsky:114)
+	at com.qihoo.livecloud.utils.d.a(lightsky:19)
+	at com.qihoo.livecloud.utils.d.b(lightsky:36)
+	at com.qihoo.livecloud.view.TexturePlayView.l(lightsky:85)
+	at com.lightsky.video.cloudplayer.d.a(lightsky:95)
+	at tv.danmaku.ijk.media.PlayerView.stopPlay(lightsky:688)
+	at tv.danmaku.ijk.media.PlayerView.playInner(lightsky:829)
+	at tv.danmaku.ijk.media.PlayerView.play(lightsky:806)
+	at com.lightsky.video.widget.video.VideoController.c(lightsky:441)
+	at com.lightsky.video.widget.video.VideoController.b(lightsky:381)
+	at com.lightsky.video.widget.video.VideoController.a(lightsky:260)
+	at com.lightsky.video.widget.video.VideoController.b(lightsky:218)
+	at com.lightsky.video.widget.video.VideoIdleLayout.f(lightsky:226)
+	at com.lightsky.video.widget.video.VideoIdleLayout.onClick(lightsky:210)
+	at android.view.View.performClick(View.java:5628)
+	at android.view.View$PerformClick.run(View.java:22289)
+	at android.os.Handler.handleCallback(Handler.java:751)
+	at android.os.Handler.dispatchMessage(Handler.java:95)
+	at android.os.Looper.loop(Looper.java:154)
+	at android.app.ActivityThread.main(ActivityThread.java:6210)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:886)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:776)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Using main activity com.lightsky.video.LauncherActivity (from package com.lightsky.video)
+11-19 04:52:06.307 E/ActivityThread(13905): Failed to find provider info for net.qihoo.dc.analytics.6c4b761a28b734fe93831e3fb400ce87
+11-19 04:52:07.777 W/FileUtils(13817): Failed to chmod(/storage/emulated/0/360OS/mms/images/): android.system.ErrnoException: chmod failed: EPERM (Operation not permitted)
+11-19 04:52:07.783 W/FileUtils(13817): Failed to chmod(/storage/emulated/0/360OS/mms/images/Cache/): android.system.ErrnoException: chmod failed: EPERM (Operation not permitted)
+11-19 04:52:08.529 W/System.err(13905): java.lang.UnsatisfiedLinkError: Library qkcryptofw not found; tried [/vendor/lib/libqkcryptofw.so, /system/lib/libqkcryptofw.so]
+11-19 04:52:08.530 W/System.err(13905): 	at java.lang.Runtime.loadLibrary(Runtime.java:396)
+11-19 04:52:08.530 W/System.err(13905): 	at java.lang.System.loadLibrary(System.java:1076)
+11-19 04:52:08.530 W/System.err(13905): 	at com.qiku.android.crypto.CryptoManagerClient.<clinit>(CryptoManagerClient.java:58)
+11-19 04:52:08.531 W/System.err(13905): 	at java.lang.Class.classForName(Native Method)
+11-19 04:52:08.531 W/System.err(13905): 	at java.lang.Class.forName(Class.java:324)
+11-19 04:52:08.531 W/System.err(13905): 	at java.lang.Class.forName(Class.java:285)
+11-19 04:52:08.531 W/System.err(13905): 	at com.qiku.android.contacts.util.ReflectUtil.loadClass(ReflectUtil.java:30)
+11-19 04:52:08.531 W/System.err(13905): 	at com.qiku.android.contacts.records.PrivateAndNormalContactsRecordsProcess.initAccessPrivateSpace(PrivateAndNormalContactsRecordsProcess.java:84)
+11-19 04:52:08.531 W/System.err(13905): 	at com.qiku.android.contacts.records.PrivateAndNormalContactsRecordsProcess.<init>(PrivateAndNormalContactsRecordsProcess.java:75)
+11-19 04:52:08.531 W/System.err(13905): 	at com.qiku.android.contacts.records.PrivateAndNormalContactsRecordsProcess.getInstance(PrivateAndNormalContactsRecordsProcess.java:64)
+11-19 04:52:08.531 W/System.err(13905): 	at com.qiku.android.contacts.ui.base.ContactsApplicationProxy.onAfterCacheInitialize(ContactsApplicationProxy.java:245)
+11-19 04:52:08.531 W/System.err(13905): 	at com.qiku.android.contacts.cache.ContactsCache.intializeNativeBuffer(ContactsCache.java:271)
+11-19 04:52:08.531 W/System.err(13905): 	at com.qiku.android.contacts.cache.ContactsCache$ControlMsgHandler.handleMessage(ContactsCache.java:539)
+11-19 04:52:08.531 W/System.err(13905): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+11-19 04:52:08.531 W/System.err(13905): 	at android.os.Looper.loop(Looper.java:148)
+11-19 04:52:08.531 W/System.err(13905): 	at android.os.HandlerThread.run(HandlerThread.java:61)
+
+
+:AllowPackage: com.lightsky.video
+:IncludeCategory: android.intent.category.LAUNCHER
+:IncludeCategory: android.intent.category.MONKEY
+// Selecting main activities from category android.intent.category.LAUNCHER
+//   - NOT USING main activity com.qiku.android.calendar.ui.MenuAnimationActivity (from package com.qiku.android.calendar)
+//   - NOT USING main activity com.qiku.android.contacts.ui.main.ContactMainActivity (from package com.qiku.android.contacts)
+//   - NOT USING main activity com.qihoo.appstore.home.LauncherActivity (from package com.qihoo.appstore)
+//   - NOT USING main activity com.qihoo.browser.activity.SplashActivity (from package com.qihoo.browser)
+//   - NOT USING main activity com.qiku.android.launcher3.Launcher (from package com.qiku.android.launcher3)
+//   - NOT USING main activity com.qiku.android.mms.ui.MmsConversationListActivity (from package com.android.mms)
+//   - NOT USING main activity com.android.camera.Camera (from package com.android.camera)
+//   - NOT USING main activity com.android.gallery3d.app.galleryforvideo (from package com.qiku.android.videoplayer)
+//   - NOT USING main activity com.android.settings.Settings (from package com.android.settings)
+//   - NOT USING main activity com.sohu.inputmethod.sogou.SogouIMELauncher (from package com.sohu.inputmethod.sogou)
+//   - NOT USING main activity com.android.email.activity.Welcome (from package com.android.email)
+//   - NOT USING main activity com.qiku.android.privacyspace.settings.LaunchEnterActivity (from package com.qiku.android.privacyspace)
+//   - NOT USING main activity com.android.gallery3d.app.GalleryActivity (from package com.android.gallery3d)
+//   - NOT USING main activity com.qiku.android.soundrecorder.SplashActivity (from package com.qiku.android.soundrecorder)
+//   - NOT USING main activity com.android.music.MusicPlayerTab (from package com.qiku.music)
+//   + Using main activity com.lightsky.video.LauncherActivity (from package com.lightsky.video)
+//   - NOT USING main activity com.qihoo360.mobilesafe.applock.ui.XLockerEntryActivity (from package com.qihoo360.mobilesafe.applock)
+//   - NOT USING main activity com.qihoo360.mobilesafe.ui.index.AppEnterActivity (from package com.qihoo360.mobilesafe)
+//   - NOT USING main activity com.cloudsync.android.sync.view.HomeActivity (from package com.qiku.android.cloudsync)
+//   - NOT USING main activity com.qiku.android.show.app.QikuShowActivity (from package com.qiku.android.show)
+//   - NOT USING main activity com.qiku.android.contacts.dial.DialActivity (from package com.qiku.android.contacts)
+//   - NOT USING main activity com.qihoo.osassistant.main.MainActivity (from package com.qihoo.osassistant)
+//   - NOT USING main activity com.qiku.riskinsight.SplashActivity (from package com.qiku.riskinsight)
+//   - NOT USING main activity com.qiku.android.filebrowser.activity.LeadingActivity (from package com.qiku.android.filebrowser)
+//   - NOT USING main activity com.qiku.freecall.message.ui.ContactConversationListActivity (from package com.qiku.freecall)
+//   - NOT USING main activity com.qiku.freecall.message.ui.ConversationListActivity (from package com.qiku.freecall)
+//   - NOT USING main activity com.sprd.gallery3d.app.VideoActivity (from package com.android.gallery3d)
+//   - NOT USING main activity com.qiku.android.sos.ui.WelcomeActivity (from package com.qiku.android.sos)
+//   - NOT USING main activity qiku.xtime.ui.main.XTimeActivity (from package com.qiku.android.xtime)
+//   - NOT USING main activity com.sprd.appbackup.activities.MainActivity (from package com.sprd.appbackup)
+//   - NOT USING main activity com.qiku.cloudfolder.activities.LauncherActivity (from package com.qiku.cloudfolder)
+//   - NOT USING main activity com.qiku.cleaner.activity.MainActivity (from package com.qiku.cleaner)
+//   - NOT USING main activity com.android.calculator2.view.BaseActivity (from package com.android.calculator2)
+//   - NOT USING main activity com.qiku.android.coolmemo.ui.CoolMemoActivity (from package com.qiku.android.memo)
+//   - NOT USING main activity com.qiku.healthguard.activity.SplashActivity (from package com.qiku.healthguard)
+//   - NOT USING main activity com.qihoo360.transfer.ui.activity.SplashActivity (from package com.qihoo360.transfer)
+//   - NOT USING main activity com.mobile.indiapp.activity.WelcomePageActivity (from package app.android.ninestore)
+//   - NOT USING main activity com.cmcm.newsindia.MainActivity (from package com.cmcm.indianews)
+//   - NOT USING main activity com.uc.iflow.main.InfoFlowActivity (from package com.uc.iflow)
+//   - NOT USING main activity com.mobilesrepublic.appy.InitActviity (from package com.mobilesrepublic.appy)
+//   - NOT USING main activity com.zyx.pkgviewer.MainActivity (from package com.zyx.pkgviewer)
+// Selecting main activities from category android.intent.category.MONKEY
+//   - NOT USING main activity com.android.launcher2.Launcher (from package com.qiku.android.launcher2)
+//   - NOT USING main activity com.qiku.android.launcher3.Launcher (from package com.qiku.android.launcher3)
+//   - NOT USING main activity com.android.settings.Settings$RunningServicesActivity (from package com.android.settings)
+//   - NOT USING main activity com.android.settings.Settings$StorageUseActivity (from package com.android.settings)
