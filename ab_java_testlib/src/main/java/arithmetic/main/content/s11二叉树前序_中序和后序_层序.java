@@ -4,6 +4,7 @@ import com.study.wjw.z_utils.Tools;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 import test.algorithms.ListNode.ListNode;
 import test.algorithms.ListNode.TreeNode;
@@ -43,6 +44,7 @@ public class s11二叉树前序_中序和后序_层序 {
 
         System.out.println("层序遍历");
         LevelOrderTraversal(root);//???
+        System.out.println("");
         System.out.println("层序遍历2");
         levelTravel(root);
     }
@@ -129,6 +131,7 @@ public class s11二叉树前序_中序和后序_层序 {
             if(temp.right!=null)q.add(temp.right);
         }
     }
+
 
 
 
