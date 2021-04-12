@@ -1,4 +1,4 @@
-package arithmetic.main.content;
+package arithmetic.main.content.aa_11;
 
 import com.study.wjw.z_utils.Log;
 import com.study.wjw.z_utils.Tools;
@@ -25,18 +25,15 @@ public class s08_删除链表的倒数第n个节点 {
     简短、易读性很高有木有..
     不用stack
      */
-    public static ListNode removeNthFromEnd (ListNode head, int n) {
+    ///todo 有间隔的双指针
+    public static ListNode removeNthFromEnd(ListNode head, int n) {
+        if (head == null) return head;
         ListNode first = head;
         ListNode second = head;
         for(int i = 0; i < n; i++) {
             first = first.next;
+            if (first == null) return head;
         }
-
-        //如果n的值等于链表的长度,直接返回去掉头结点的链表
-        if(first == null) {
-            return head.next;
-        }
-
         //同时移动两个指针
         while(first.next != null){
             first = first.next;

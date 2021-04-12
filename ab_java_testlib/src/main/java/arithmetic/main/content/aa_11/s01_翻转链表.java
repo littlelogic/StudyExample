@@ -1,10 +1,11 @@
+package arithmetic.main.content.aa_11;
+
 import com.study.wjw.z_utils.Log;
 import com.study.wjw.z_utils.Tools;
 
-import others.SingletonDemo;
 import test.algorithms.ListNode.ListNode;
 
-public class Test {
+public class s01_翻转链表 {
 
     static {
         int[] array = new int[]{ 1,2,3,4,5,6,7,8,9 };
@@ -73,10 +74,10 @@ public class Test {
     ///-----
 
     /** todo
-     初始条件判空返回
-     初始逻辑赋值
-     if条件跳出循环返回
-     else逻辑执行
+    初始条件判空返回
+    初始逻辑赋值
+    if条件跳出循环返回
+    else逻辑执行
      */
 
     /**
@@ -172,4 +173,6 @@ public class Test {
             }
         }
     }
+
+
 }

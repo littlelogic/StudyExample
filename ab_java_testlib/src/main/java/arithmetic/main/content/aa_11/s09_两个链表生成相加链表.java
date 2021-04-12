@@ -1,4 +1,4 @@
-package arithmetic.main.content;
+package arithmetic.main.content.aa_11;
 
 import com.study.wjw.z_utils.Tools;
 
@@ -30,9 +30,19 @@ public class s09_两个链表生成相加链表 {
         System.out.print("借助Stack没有改变原链表的结构: ");
         Tools.printListNode(result);
 
+        int[] array41 = new int[]{ 1,4,9};
+        int[] array42 = new int[]{ 2,5,6};
+        ListNode  ListNode41 = Tools.convertListNode(array41);
+        Tools.printListNode(ListNode41);
+        ListNode  ListNode42 = Tools.convertListNode(array42);
+        Tools.printListNode(ListNode42);
+
+
+
     }
 
 
+    //链表1为 9->3->7，链表2为 6->3，最后生成新的结果链表为 1->0->0->0
     public static ListNode addInListByStack(ListNode head1, ListNode head2) {
         if (head1 == null)
             return head2;

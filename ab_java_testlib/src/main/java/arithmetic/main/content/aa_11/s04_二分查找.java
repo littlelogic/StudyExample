@@ -1,4 +1,4 @@
-package arithmetic.main.content;
+package arithmetic.main.content.aa_11;
 
 import com.study.wjw.z_utils.Log;
 import com.study.wjw.z_utils.Tools;
@@ -68,7 +68,7 @@ public class s04_二分查找 {
                 }
             } else if (arr[middle] < des) {
                 left = middle + 1;
-            } else {
+            } else /*if (arr[middle] > des)*/{
                 right = middle - 1;
             }
         }

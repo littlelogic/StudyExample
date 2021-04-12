@@ -1,22 +1,23 @@
+package arithmetic.main.content.aa_11;
+
 import com.study.wjw.z_utils.Log;
 import com.study.wjw.z_utils.Tools;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 import test.algorithms.ListNode.ListNode;
 import test.algorithms.ListNode.TreeNode;
 
-public class Test2 {
+public class s11二叉树前序_中序和后序_层序 {
+
 
     public static void visit(TreeNode node){
 //        if (node != null) {
         System.out.print(node.val+" ");
 //        }
     }
-
-
-
 
     public static void main(String[] args) {
 
@@ -50,7 +51,6 @@ public class Test2 {
         maxWidth(root);
         System.out.println("层序遍历32last");
     }
-
 
     /**
      * 递归先序遍历
@@ -212,8 +212,6 @@ public class Test2 {
     }
 
 
-
-
     public static void levelTravel(TreeNode root){
         if(root==null)return;
         Queue<TreeNode> q=new LinkedList<TreeNode>();
@@ -237,5 +235,6 @@ public class Test2 {
         invertTree(root.right);
         return root;
     }
+
 
 }
