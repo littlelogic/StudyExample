@@ -8,6 +8,7 @@ import android.graphics.Canvas;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
@@ -54,6 +55,11 @@ public class MyImageView extends ImageView {
         super.onSizeChanged(w, h, oldw, oldh);
     }
 
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        return super.dispatchTouchEvent(event);
+    }
 
     @Override
     public void draw(Canvas canvas) {

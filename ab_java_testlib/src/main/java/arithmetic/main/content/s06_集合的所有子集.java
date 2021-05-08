@@ -1,5 +1,6 @@
 package arithmetic.main.content;
 
+import com.study.wjw.z_utils.Log;
 import com.study.wjw.z_utils.Tools;
 
 import java.util.ArrayList;
@@ -16,11 +17,17 @@ public class s06_集合的所有子集 {
         final int[] array = new int[]{ 1,2,3};
         Tools.printIntArray(array);
 
+
+        Log.i("-----------");
+
+
+
 //        ArrayList<ArrayList<Integer>> lists =  subsets(array);
         ArrayList<ArrayList<Integer>> lists =  getSubset(array);
 
         for (ArrayList<Integer> list : lists) {
             Tools.printIntArray(list);
+            Log.i("");
         }
 
 

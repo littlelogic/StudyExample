@@ -84,7 +84,8 @@ public class FunctionInfor {
 
         functionInforList.add(new FunctionInfor(com.study.diyView.TestActivity.class,
                 "-mLeft mScrollX translationX-"));
-
+        functionInforList.add(new FunctionInfor(com.study.surfaceview.surfaceViewActivity.class,
+                "-surfaceViewActivity-"));
 
 
 
@@ -95,7 +96,9 @@ public class FunctionInfor {
 //        Intent mIntent = new Intent(mContext, com.study.RxAndroid.RxAndroidActiv.class);
 //        Intent mIntent = new Intent(mContext, com.study.RxAndroid.RxAndroidActiv__think.class);
 
-        Intent mIntent = new Intent(mContext, com.study.diyView.TestActivity.class);
+//        Intent mIntent = new Intent(mContext, com.study.diyView.TestActivity.class);
+//        Intent mIntent = new Intent(mContext, com.study.surfaceview.surfaceViewActivity.class);
+        Intent mIntent = new Intent(mContext, com.study.activState.AnrActivity.class);
 
 
 
