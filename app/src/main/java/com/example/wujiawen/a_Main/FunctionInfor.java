@@ -86,7 +86,12 @@ public class FunctionInfor {
                 "-mLeft mScrollX translationX-"));
         functionInforList.add(new FunctionInfor(com.study.surfaceview.surfaceViewActivity.class,
                 "-surfaceViewActivity-"));
-
+        functionInforList.add(new FunctionInfor(com.example.wujiawen.proxy.ProxyActivity.class,
+                "-ProxyActivity-"));
+        functionInforList.add(new FunctionInfor(com.study.activState.AnrActivity.class,
+                "-AnrActivity-"));
+        functionInforList.add(new FunctionInfor(com.study.activState.OomActivity.class,
+                "-OomActivity-"));
 
 
     }
@@ -98,7 +103,8 @@ public class FunctionInfor {
 
 //        Intent mIntent = new Intent(mContext, com.study.diyView.TestActivity.class);
 //        Intent mIntent = new Intent(mContext, com.study.surfaceview.surfaceViewActivity.class);
-        Intent mIntent = new Intent(mContext, com.study.activState.AnrActivity.class);
+//        Intent mIntent = new Intent(mContext, com.study.activState.AnrActivity.class);
+        Intent mIntent = new Intent(mContext, com.study.activState.OomActivity.class);
 
 
 

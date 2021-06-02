@@ -222,6 +222,26 @@
             android:screenOrientation="portrait">
         </activity>
 
+
+        <activity
+            android:name="com.study.activState.OomActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.example.wujiawen.proxy.ProxyActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+
         <activity
             android:name="com.study.surfaceview.surfaceViewActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"

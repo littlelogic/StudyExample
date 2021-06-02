@@ -22,6 +22,7 @@ public class AIDLService extends Service {
     private IOperationManager.Stub stub = new IOperationManager.Stub() {
         @Override
         public void operation(Parameter parameter1, Parameter parameter2) throws RemoteException {
+            Log.i("wjw02","190806a-AIDLService-operation-01-currentThread().getName->"+Thread.currentThread().getName());
             try {
                 Log.e(TAG, "operation 被调用，延时500毫秒，模拟耗时计算");
                 Thread.sleep(500);
@@ -42,21 +43,21 @@ public class AIDLService extends Service {
             }
             callbackList.finishBroadcast();
             Log.e(TAG, "计算结束");
-            Log.i("wjw02","190806a-AIDLService-operation->");
+            Log.i("wjw02","190806a-AIDLService-operation-99-currentThread().getName->"+Thread.currentThread().getName());
         }
 
         @Override
         public void registerListener(IOnOperationCompletedListener listener) throws RemoteException {
             callbackList.register(listener);
             Log.e(TAG, "registerListener 注册回调成功");
-            Log.i("wjw02","190806a-AIDLService-registerListener->");
+            Log.i("wjw02","190806a-AIDLService-registerListener-currentThread().getName()->"+Thread.currentThread().getName());
         }
 
         @Override
         public void unregisterListener(IOnOperationCompletedListener listener) throws RemoteException {
             callbackList.unregister(listener);
             Log.e(TAG, "unregisterListener 解除注册回调成功");
-            Log.i("wjw02","190806a-AIDLService-unregisterListener->");
+            Log.i("wjw02","190806a-AIDLService-unregisterListener-currentThread().getName()->"+Thread.currentThread().getName());
         }
     };
 
@@ -66,7 +67,7 @@ public class AIDLService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
-        Log.i("wjw02","190806a-AIDLService-onBind->");
+        Log.i("wjw02","190806a-AIDLService-onBind-currentThread().getName->"+Thread.currentThread().getName());
         return stub;
     }
 

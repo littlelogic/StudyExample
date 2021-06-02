@@ -16,6 +16,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.provider.Settings;
 import android.util.Log;
+import android.util.Printer;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -114,6 +115,7 @@ public class AnrActivity extends Activity {
             }
         });
 
+        this.getMainLooper().setMessageLogging(new MyPrinter());
 
         timingCheck(Thread.currentThread());
         new Handler(Looper.getMainLooper()).post(
@@ -132,8 +134,37 @@ public class AnrActivity extends Activity {
                             }}}});
 
 
+        new Handler(Looper.getMainLooper()).post(new  Runnable(){
+            @Override
+            public void run() {
+
+            }
+        });
 
 
+    }
+
+
+    static Runnable mMyRunnable = new  Runnable(){
+        @Override
+        public void run() {
+            ///--AnrActivity.this.targetHandler = null;
+        }
+    };
+
+
+    static class  MyRunnable implements Runnable{
+        @Override
+        public void run() {
+
+        }
+    }
+
+    class MyPrinter implements Printer {
+        @Override
+        public void println(String x) {
+            Log.i("11","-AnrActivity-MyPrinter-println-x->"+x);
+        }
     }
 
     ///========================================================

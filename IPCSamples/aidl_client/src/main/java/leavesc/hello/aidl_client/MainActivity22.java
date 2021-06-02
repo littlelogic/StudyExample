@@ -24,7 +24,7 @@ import leavesc.hello.aidl_server.Parameter;
  * 时间：2019/4/4 10:45
  * 描述：客户端
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity22 extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
     private EditText et_param1;
@@ -32,49 +32,47 @@ public class MainActivity extends AppCompatActivity {
     private EditText et_result;
 
     private IOperationManager iOperationManager;
-
-    private IOnOperationCompletedListener completedListener = new IOnOperationCompletedListener.Stub() {
-        @Override
-        public void onOperationCompleted(final Parameter result) throws RemoteException {
-            Log.i("wjw02","190806a-client-MainActivity-onOperationCompleted-currentThread().getName->"+Thread.currentThread().getName());
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
+    IOnOperationCompletedListener listener=new IOnOperationCompletedListener.Stub(){
+        public void onOperationCompleted(final Parameter result) throws RemoteException{
+            runOnUiThread(new Runnable() {//todo 接收的线程是client_send ，一般转到主线程处理
+                @Override public void run() {
                     et_result.setText("运算结果： " + result.getParam());
                 }
             });
         }
     };
-
+    private void sendData() {
+        Thread hThread=new Thread(new Runnable() {//todo 转到子线程处理
+            @Override public void run() {
+                if (iOperationManager != null)
+                    try {
+                        iOperationManager.operation(new Parameter(12),new Parameter(34));
+                    } catch (RemoteException e) {  }
+            }
+        }); hThread.setName("client_send"); hThread.start();
+    }
     private ServiceConnection serviceConnection = new ServiceConnection() {
-        @Override
-        public void onServiceConnected(ComponentName name, IBinder service) {
-            Log.i("wjw02","190806a-client-MainActivity-onServiceConnected-currentThread().getName()->"+Thread.currentThread().getName());
+        @Override public void onServiceConnected(ComponentName name,IBinder service) {
             iOperationManager = IOperationManager.Stub.asInterface(service);
         }
-
-        @Override
-        public void onServiceDisconnected(ComponentName name) {
-            Log.i("wjw02","190806a-client-MainActivity-onServiceDisconnected-currentThread().getName()->"+Thread.currentThread().getName());
+        @Override public void onServiceDisconnected(ComponentName name) {
             iOperationManager = null;
         }
     };
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        Log.i("wjw02","190806a-client-MainActivity-onCreate->");
-        setContentView(R.layout.activity_main);
-        initView();
-        bindService();
-    }
-
     private void bindService() {
-        Log.i("wjw02","190806a-client-MainActivity-bindService->");
         Intent intent = new Intent();
-        intent.setClassName("leavesc.hello.aidl_server", "leavesc.hello.aidl_server.AIDLService");
+        intent.setClassName("leavesc.hello.aidl_server","leavesc.hello.aidl_server.AIDLService");
         bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
     }
+    @Override protected void onDestroy() { super.onDestroy();
+        if (serviceConnection != null) unbindService(serviceConnection);
+    }
+
+
+
+
+
+
 
     private void initView() {
         et_param1 = findViewById(R.id.et_param1);
@@ -91,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                         if (iOperationManager != null) {
                             try {
                                 Log.i("wjw02","190806a-client-MainActivity-iOperationManager->");
-                                iOperationManager.registerListener(completedListener);
+                                iOperationManager.registerListener(listener);
                             } catch (RemoteException e) {
                                 e.printStackTrace();
                                 Log.i("wjw02","190806a-client-MainActivity-onOperationCompleted-RemoteException->"+e.getMessage());
@@ -103,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                         if (iOperationManager != null) {
                             try {
                                 Log.i("wjw02","190806a-client-MainActivity-unregisterListener->");
-                                iOperationManager.unregisterListener(completedListener);
+                                iOperationManager.unregisterListener(listener);
                             } catch (RemoteException e) {
                                 e.printStackTrace();
                             }
@@ -116,24 +114,21 @@ public class MainActivity extends AppCompatActivity {
                         }
                         final int param1 = Integer.valueOf(et_param1.getText().toString());
                         final int param2 = Integer.valueOf(et_param2.getText().toString());
-                        Thread hThread = new Thread(new Runnable() {
+                        new Thread(new Runnable() {
                             @Override
                             public void run() {
                                 Parameter parameter1 = new Parameter(param1);
                                 Parameter parameter2 = new Parameter(param2);
                                 if (iOperationManager != null) {
                                     try {
-                                        Log.i("wjw02","190806a-client-MainActivity-operation-currentThread().getName->"+Thread.currentThread().getName());
+                                        Log.i("wjw02","190806a-client-MainActivity-operation->");
                                         iOperationManager.operation(parameter1, parameter2);
-                                        Log.i("wjw02","190806a-client-MainActivity-operation-99->");
                                     } catch (RemoteException e) {
                                         e.printStackTrace();
                                     }
                                 }
                             }
-                        });
-                        hThread.setName("client-binder_send");
-                        hThread.start();
+                        }).start();
                         break;
                     }
                 }
@@ -145,11 +140,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (serviceConnection != null) {
-            unbindService(serviceConnection);
-        }
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Log.i("wjw02","190806a-client-MainActivity-onCreate->");
+        setContentView(R.layout.activity_main);
+        initView();
+        bindService();
     }
+
+
 
 }
