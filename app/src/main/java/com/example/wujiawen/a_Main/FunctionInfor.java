@@ -92,7 +92,8 @@ public class FunctionInfor {
                 "-AnrActivity-"));
         functionInforList.add(new FunctionInfor(com.study.activState.OomActivity.class,
                 "-OomActivity-"));
-
+        functionInforList.add(new FunctionInfor(com.study.activState.JavassistActivity.class,
+                "-JavassistActivity-"));
 
     }
 

@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ab_java_testlib/StudyExample.ab_java_testlib.iml" filepath="$PROJECT_DIR$/.idea/modules/ab_java_testlib/StudyExample.ab_java_testlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/StudyExample.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/StudyExample.app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/listview/StudyExample.listview.iml" filepath="$PROJECT_DIR$/.idea/modules/listview/StudyExample.listview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modify/StudyExample.modify.iml" filepath="$PROJECT_DIR$/.idea/modules/modify/StudyExample.modify.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/utils/StudyExample.utils.iml" filepath="$PROJECT_DIR$/.idea/modules/utils/StudyExample.utils.iml" />
     </modules>
   </component>

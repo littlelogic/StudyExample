@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'javassist.sample.yzk.zw.com'
 
 android {
     compileSdkVersion 28
