@@ -1,10 +1,14 @@
 package com.example.wujiawen.a_Main;//com.example.wujiawen.a_Main.ContentProviderActi
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.Notification;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -22,12 +26,17 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.PermissionChecker;
+
 import com.badlogic.utils.ALog;
 import com.badlogic.utils.Tools;
 import com.example.wujiawen.ExampleLanguage.LanguageActiv;
 
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 //public class ContentProviderActi extends BaseActivity {
 public class MainActivity extends Activity {
@@ -70,9 +79,10 @@ public class MainActivity extends Activity {
             }
         });
 
-        FunctionInfor.testFirstStartActivity(this);
+//        FunctionInfor.testFirstStartActivity(this);
         //----------------
         ALog.d("00","----");
+        checkPermission(this);
 
 
 //        com.airbnb.lottie.LottieAnimationView   fff;
@@ -176,6 +186,86 @@ public class MainActivity extends Activity {
         RelativeLayout out_layout;
         TextView name;
     }
+
+
+    static Set<String> permissionsSet_now = new LinkedHashSet<>();
+    static Set<String> permissionsSet_base = new LinkedHashSet<>();
+    static Set<String> permissionsSet = new LinkedHashSet<>();
+
+    static {
+        permissionsSet_base.add(Manifest.permission.GET_ACCOUNTS);
+        ///-对google评分有影响-
+        permissionsSet_base.add(Manifest.permission.READ_PHONE_STATE);//imei 需要 广告要用到
+        permissionsSet_base.add(android.Manifest.permission.READ_EXTERNAL_STORAGE);
+        permissionsSet_base.add(android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        permissionsSet_base.add(android.Manifest.permission.VIBRATE);
+        permissionsSet_base.add(android.Manifest.permission.INTERNET);
+        permissionsSet_base.add(android.Manifest.permission.CHANGE_WIFI_STATE);
+        permissionsSet_base.add(android.Manifest.permission.CHANGE_NETWORK_STATE);
+        permissionsSet_base.add(android.Manifest.permission.ACCESS_NETWORK_STATE);
+        permissionsSet_base.add(Manifest.permission.ACCESS_WIFI_STATE);
+    }
+
+    private void addNeedPermissions() {
+        permissionsSet.addAll(permissionsSet_base);
+    }
+
+    private void checkPermission(Context mContext) {
+        addNeedPermissions();
+        for (String permission_str : permissionsSet) {
+            boolean mPermission = checkPermissionGranted(mContext, permission_str);
+            if (!mPermission) {
+                permissionsSet_now.add(permission_str);
+            }
+        }
+
+/*        if (permissionsSet_now.size() <= 0) {
+            dealStartActivity();
+            return;
+        }*/
+
+        if (permissionsSet_now.size() <= 0) {
+            //如果不显示引导，直接跳到MainActivity
+            FunctionInfor.testFirstStartActivity(this);
+        } else {
+            String[] permission_str_array = permissionsSet_now.toArray(new String[]{});
+            //请求权限
+            try {
+                ActivityCompat.requestPermissions((Activity) mContext, permission_str_array, 23);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public static boolean checkPermissionGranted(Context context, String permission) {
+        // Android 6.0 以前，全部默认授权
+        boolean result = true;
+        int targetSdkVersion = 21;
+        try {
+            final PackageInfo info = context.getPackageManager().getPackageInfo(
+                    context.getPackageName(), 0);
+            targetSdkVersion = info.applicationInfo.targetSdkVersion;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (targetSdkVersion >= Build.VERSION_CODES.M) {
+                // targetSdkVersion >= 23, 使用Context#checkSelfPermission
+                result = context.checkSelfPermission(permission)
+                        == PackageManager.PERMISSION_GRANTED;
+            } else {
+                // targetSdkVersion < 23, 需要使用 PermissionChecker
+                result = PermissionChecker.checkSelfPermission(context, permission)
+                        == PermissionChecker.PERMISSION_GRANTED;
+            }
+        }
+        return result;
+    }
+
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

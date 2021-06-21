@@ -7,7 +7,8 @@
     <uses-sdk
         android:targetSdkVersion="23" />
 
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
     <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
@@ -197,6 +198,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
+        android:requestLegacyExternalStorage="true"
         tools:remove="android:appComponentFactory">
 
 
@@ -227,6 +229,14 @@
 
         <activity
             android:name="com.study.activState.JavassistActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.study.z_reference.ReferenceActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:windowSoftInputMode="stateHidden|adjustResize"
             android:launchMode="singleTop"

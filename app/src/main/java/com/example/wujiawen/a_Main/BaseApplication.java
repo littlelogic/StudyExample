@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 
 import com.badlogic.utils.ALog;
+import com.badlogic.utils.Tools;
 import com.example.wujiawen.ExampleLanguage.LanguageUtil;
 
 import java.util.LinkedList;

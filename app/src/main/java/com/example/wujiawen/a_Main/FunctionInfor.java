@@ -94,10 +94,16 @@ public class FunctionInfor {
                 "-OomActivity-"));
         functionInforList.add(new FunctionInfor(com.study.activState.JavassistActivity.class,
                 "-JavassistActivity-"));
+        functionInforList.add(new FunctionInfor(com.study.z_reference.ReferenceActivity.class,
+                "-ReferenceActivity-"));
+
+
+
 
     }
 
     public static void testFirstStartActivity(Context mContext){
+        Class targetClass = com.study.z_reference.ReferenceActivity.class;
 //        Intent mIntent = new Intent(mContext, HandlerLoopActiv.class);
 //        Intent mIntent = new Intent(mContext, com.study.RxAndroid.RxAndroidActiv.class);
 //        Intent mIntent = new Intent(mContext, com.study.RxAndroid.RxAndroidActiv__think.class);
@@ -105,9 +111,9 @@ public class FunctionInfor {
 //        Intent mIntent = new Intent(mContext, com.study.diyView.TestActivity.class);
 //        Intent mIntent = new Intent(mContext, com.study.surfaceview.surfaceViewActivity.class);
 //        Intent mIntent = new Intent(mContext, com.study.activState.AnrActivity.class);
-        Intent mIntent = new Intent(mContext, com.study.activState.OomActivity.class);
+//        Intent mIntent = new Intent(mContext, com.study.activState.OomActivity.class);
 
-
+        Intent mIntent = new Intent(mContext, targetClass);
 
         String ddddd= null;
 //        Intent mIntent = new Intent(mContext, DiyPerViewActiv.class);

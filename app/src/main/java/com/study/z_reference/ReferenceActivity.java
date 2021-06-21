@@ -1,13 +1,70 @@
 package com.study.z_reference;
 
+// com.study.z_reference.ReferenceActivity
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+
+import com.badlogic.utils.ALog;
+
 import java.lang.ref.PhantomReference;
 import java.lang.ref.Reference;
 import java.lang.ref.ReferenceQueue;
 import java.lang.ref.SoftReference;
 import java.lang.ref.WeakReference;
 import java.lang.reflect.Field;
+import static java.sql.DriverManager.println;
 
-public class ReferenceTest {
+
+
+public class ReferenceActivity extends Activity {
+
+
+
+    class Person{
+
+        public Person(){
+
+        }
+
+    }
+
+
+    private WeakReference<Person> mWeakReference = null;
+    private ReferenceQueue queue = new ReferenceQueue();
+
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Person s = new Person();
+        mWeakReference = new WeakReference(s, queue);
+        s = null;
+        System.gc();
+
+        Button button = new Button(this);
+        button.setText("poll");
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.gc();
+                Log.i("wjw","-ReferenceActivity-onCreate-onClick-mWeakReference.get()->" + mWeakReference.get());
+                WeakReference reference = (WeakReference) queue.poll();
+                if (reference != null) {
+                    Log.i("wjw","-ReferenceActivity-onCreate-onClick-reference.get()->" + reference.get());
+                    if (mWeakReference == reference) {
+                        Log.i("wjw","-ReferenceActivity-onCreate-onClick-哈哈监听到啦！->");
+                    }
+                }
+            }
+        });
+        setContentView(button);
+    }
+
+
+
+
+
 
     /**
      *
@@ -70,7 +127,6 @@ public class ReferenceTest {
 
     }
 
-
     public static boolean isRun = true;
 
     /**
@@ -123,6 +179,5 @@ public class ReferenceTest {
         Thread.currentThread().sleep(3000);
         isRun = false;
     }
-
 
 }
