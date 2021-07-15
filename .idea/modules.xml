@@ -11,6 +11,8 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/listview/StudyExample.listview.iml" filepath="$PROJECT_DIR$/.idea/modules/listview/StudyExample.listview.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/modify/StudyExample.modify.iml" filepath="$PROJECT_DIR$/.idea/modules/modify/StudyExample.modify.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/utils/StudyExample.utils.iml" filepath="$PROJECT_DIR$/.idea/modules/utils/StudyExample.utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zz_summarize_study/StudyExample.zz_summarize_study.iml" filepath="$PROJECT_DIR$/.idea/modules/zz_summarize_study/StudyExample.zz_summarize_study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zz_summarize_study/longlight/StudyExample.zz_summarize_study.longlight.iml" filepath="$PROJECT_DIR$/.idea/modules/zz_summarize_study/longlight/StudyExample.zz_summarize_study.longlight.iml" />
     </modules>
   </component>
 </project>

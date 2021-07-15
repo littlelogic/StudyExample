@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -83,6 +84,9 @@ public class MainActivity extends Activity {
         //----------------
         ALog.d("00","----");
         checkPermission(this);
+
+
+//        Settings.System.putInt(getContentResolver(),android.provider.Settings.System.SCREEN_OFF_TIMEOUT,-1);
 
 
 //        com.airbnb.lottie.LottieAnimationView   fff;

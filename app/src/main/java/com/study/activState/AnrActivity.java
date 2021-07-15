@@ -142,6 +142,8 @@ public class AnrActivity extends Activity {
         });
 
 
+
+
     }
 
 
@@ -149,6 +151,9 @@ public class AnrActivity extends Activity {
         @Override
         public void run() {
             ///--AnrActivity.this.targetHandler = null;
+
+
+
         }
     };
 
@@ -161,9 +166,32 @@ public class AnrActivity extends Activity {
     }
 
     class MyPrinter implements Printer {
+
+        long start_time = 0;
+        long differ_time = 0;
+
         @Override
         public void println(String x) {
-            Log.i("11","-AnrActivity-MyPrinter-println-x->"+x);
+
+            if (x != null && x.contains("Dispatching")) {
+                start_time = System.currentTimeMillis();
+            }
+            if (x != null && x.contains("Finished")) {
+                differ_time = System.currentTimeMillis() - start_time;
+            }
+
+            if (differ_time > 16) {
+                //todo 打印主线程的调用栈信息
+                for (StackTraceElement item : Thread.currentThread().getStackTrace()) {
+                    Log.e("11","-AnrActivity-println-wws-"
+                            + "-differ_time->"+differ_time
+                            + "-getClassName->"+item.getClassName()
+                            + "-getMethodName->"+item.getMethodName()
+                            + "-getLineNumber->"+item.getLineNumber()
+                            + "-item.toString()->"+item.toString()
+                    );
+                }
+            }
         }
     }
 

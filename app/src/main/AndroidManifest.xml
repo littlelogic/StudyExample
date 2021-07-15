@@ -282,7 +282,6 @@
         </activity>
 
 
-
         <activity
             android:name="com.example.wujiawen.Tools.AlphaActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
@@ -568,10 +567,22 @@
             android:screenOrientation="portrait">
         </activity>
 
-
-
-
-
+        <activity
+            android:name="com.study.diyView.RippleActiv"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.study.diyView.RippleMeshActiv"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
 
 
 
@@ -592,7 +603,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
-        </activity-alias>&ndash;&gt;
+        </activity-alias>
 
         <activity-alias
             android:enabled="true"

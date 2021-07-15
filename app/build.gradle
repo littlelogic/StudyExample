@@ -115,8 +115,9 @@ dependencies {
 
     implementation 'com.shizhefei:HVScrollView:1.0.1'
 
-    implementation 'com.github.littlelogic:commonunit:1.0'
-
+//    implementation 'com.github.littlelogic:commonunit:1.0'
+    implementation 'com.github.littlelogic:commonunit:v1.6'
+//    compile 'com.github.littlelogic:commonunit:v1.6'
 
 }
 

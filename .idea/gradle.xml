@@ -19,6 +19,8 @@
             <option value="$PROJECT_DIR$/listview" />
             <option value="$PROJECT_DIR$/modify" />
             <option value="$PROJECT_DIR$/utils" />
+            <option value="$PROJECT_DIR$/zz_summarize_study" />
+            <option value="$PROJECT_DIR$/zz_summarize_study/longlight" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

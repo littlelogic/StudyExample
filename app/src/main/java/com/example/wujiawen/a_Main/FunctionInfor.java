@@ -96,6 +96,10 @@ public class FunctionInfor {
                 "-JavassistActivity-"));
         functionInforList.add(new FunctionInfor(com.study.z_reference.ReferenceActivity.class,
                 "-ReferenceActivity-"));
+        functionInforList.add(new FunctionInfor(com.study.diyView.RippleActiv.class,
+                "-水波纹、涟漪效果-"));
+        functionInforList.add(new FunctionInfor(com.study.diyView.RippleMeshActiv.class,
+                "-水波纹、涟漪效果2-"));
 
 
 
@@ -103,7 +107,13 @@ public class FunctionInfor {
     }
 
     public static void testFirstStartActivity(Context mContext){
-        Class targetClass = com.study.z_reference.ReferenceActivity.class;
+        Class targetClass = null;
+//        Class targetClass = com.study.activState.AnrActivity.class;
+//        Class targetClass = com.study.activState.OomActivity.class;
+//        targetClass = com.study.diyView.RippleActiv.class;
+        targetClass = com.study.diyView.RippleMeshActiv.class;
+
+
 //        Intent mIntent = new Intent(mContext, HandlerLoopActiv.class);
 //        Intent mIntent = new Intent(mContext, com.study.RxAndroid.RxAndroidActiv.class);
 //        Intent mIntent = new Intent(mContext, com.study.RxAndroid.RxAndroidActiv__think.class);

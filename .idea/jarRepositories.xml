@@ -96,5 +96,15 @@
       <option name="name" value="maven" />
       <option name="url" value="file:$PROJECT_DIR$/repo/" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="file:$PROJECT_DIR$/zz_summarize_study/longlight/repo" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="file:$PROJECT_DIR$/zz_summarize_study/repo" />
+    </remote-repository>
   </component>
 </project>

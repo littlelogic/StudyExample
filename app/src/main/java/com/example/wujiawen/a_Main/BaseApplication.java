@@ -23,6 +23,8 @@ import java.util.Locale;
 
 public class BaseApplication extends Application {
 
+
+    public static BaseApplication Me = null;
     //--------
     public ActivityLifecycleCallbacks callback;
     public List<Activity> mListActivity = new LinkedList<Activity>();
@@ -31,6 +33,7 @@ public class BaseApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        Me = this;
         ALog.i(ALog.Tag2,"BaseApplication--onCreate->");
         dealAppLanguage();
         //========================================================================

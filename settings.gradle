@@ -10,6 +10,9 @@ include ':listview'
 //include ':ab_exercise'
 
 
+include ':zz_summarize_study:longlight'
+
+
 //include ':ab_exercise:librecorder_sdk'
 
 

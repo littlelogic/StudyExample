@@ -27,6 +27,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
@@ -45,6 +46,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.RandomAccessFile;
 import java.lang.reflect.Method;
+import java.nio.MappedByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -102,17 +104,47 @@ public class OomActivity extends Activity implements View.OnClickListener{
         findViewById(R.id.bt8).setOnClickListener(this);
         ///--
         printThread();
+
     }
 
     private void test() {
         try {
-            Debug.dumpHprofData("/sdcard/11/dumpHprofData.hprof");
+            String path = "/sdcard/11/dumpHprofData.hprof";
+            File heapDumpFile = new File(path);
+            if (heapDumpFile.exists()) {
+                heapDumpFile.deleteOnExit();
+            }
+
+            Debug.dumpHprofData(path);
+
+            if (heapDumpFile.exists()) {
+                Toast.makeText(this,"hprof文件导出完成，文件存在",Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this,"hprof文件导出完成，文件不存在",Toast.LENGTH_SHORT).show();
+            }
         } catch (Exception e) {
             e.printStackTrace();
             Log.d(TAG, "-OomActivity-test"
                     + "-e.printStackTrace()->"+e.toString()
             );
         }
+
+
+//        1、导出堆栈文件
+//        File heapDumpFile = ...
+//        Debug.dumpHprofData(heapDumpFile.getAbsolutePath());
+//        复制代码
+//        2、根据堆栈文件创建出内存映射文件缓冲区
+//        DataBuffer buffer = new MemoryMappedFileBuffer(heapDumpFile);
+//        复制代码
+//        3、根据文件缓存区创建出对应的快照
+//        Snapshot snapshot = Snapshot.createSnapshot(buffer);
+//        复制代码
+//        4、从快照中获取指定的类
+//        ClassObj someClass = snapshot.findClass("com.example.SomeClass");
+
+//        MappedByteBuffer ssss;
+//        HprofBuffer buffer = new MemoryMappedFileBuffer(heapDumpFile);
 
 
 //        // 1.构建内存映射的 HprofBuffer 针对大文件的一种快速的读取方式，其原理是将文件流的通道与  ByteBuffer 建立起关联，并只在真正发生读取时才从磁盘读取内容出来。
